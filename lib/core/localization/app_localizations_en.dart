@@ -19,6 +19,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get saveProject => 'Save project';
 
   @override
+  String get shareImage => 'Share image';
+
+  @override
   String get tools => 'Tools';
 
   @override

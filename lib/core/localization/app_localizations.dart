@@ -123,6 +123,12 @@ abstract class AppLocalizations {
   /// **'Save project'**
   String get saveProject;
 
+  /// No description provided for @share.
+  ///
+  /// In en, this message translates to:
+  /// **'Save project'**
+  String get shareImage;
+
   /// No description provided for @tools.
   ///
   /// In en, this message translates to:

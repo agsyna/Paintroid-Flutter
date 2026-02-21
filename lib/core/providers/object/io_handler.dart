@@ -256,4 +256,7 @@ class IOHandler {
       },
     );
   }
+  Future<void> shareImage(BuildContext context) async{
+    debugPrint('Share function called');
+  }
 }

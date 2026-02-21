@@ -80,6 +80,9 @@ void main() {
           case OverflowMenuOption.saveProject:
             label = localizations.saveProject;
             break;
+          case OverflowMenuOption.shareImage:
+            label = localizations.saveProject;
+            break;
         }
         expect(find.text(label), findsOneWidget,
             reason: 'Menu item $label should be visible');
@@ -252,6 +255,19 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(canvasFinder, findsNothing);
+    });
+  }
+
+  if (testID == -1 || testID == 12) {
+    testWidgets('[OVERFLOW_MENU]: Share option calls share function in IOHandler',
+        (tester) async {
+      await initializeAppAndLocalizations(tester);
+      await tester.tap(find.byIcon(Icons.more_vert));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text(localizations.shareImage));
+      await tester.pumpAndSettle();
+
+      expect(find.byType(SaveImageDialog), findsOneWidget);
     });
   }
 }
