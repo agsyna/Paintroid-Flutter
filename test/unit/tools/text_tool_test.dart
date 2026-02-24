@@ -44,6 +44,7 @@ void main() {
     isBold: false,
     isItalic: false,
     isUnderline: false,
+    isOutline: false
   ));
 
   provideDummy<TextToolOptionsStateProvider>(
@@ -62,6 +63,7 @@ void main() {
       isBold: false,
       isItalic: false,
       isUnderline: false,
+      isOutline: false,
       text: 'Hello',
       isAutoSize: true,
     );

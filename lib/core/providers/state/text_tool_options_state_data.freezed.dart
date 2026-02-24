@@ -22,6 +22,7 @@ mixin _$TextToolOptionsStateData {
   bool get isBold => throw _privateConstructorUsedError;
   bool get isItalic => throw _privateConstructorUsedError;
   bool get isUnderline => throw _privateConstructorUsedError;
+  bool get isOutline => throw _privateConstructorUsedError;
   String get fontFamily => throw _privateConstructorUsedError;
 
   /// Create a copy of TextToolOptionsStateData
@@ -44,6 +45,7 @@ abstract class $TextToolOptionsStateDataCopyWith<$Res> {
       bool isBold,
       bool isItalic,
       bool isUnderline,
+      bool isOutline,
       String fontFamily});
 }
 
@@ -69,6 +71,7 @@ class _$TextToolOptionsStateDataCopyWithImpl<$Res,
     Object? isBold = null,
     Object? isItalic = null,
     Object? isUnderline = null,
+    Object? isOutline = null,
     Object? fontFamily = null,
   }) {
     return _then(_value.copyWith(
@@ -96,6 +99,10 @@ class _$TextToolOptionsStateDataCopyWithImpl<$Res,
           ? _value.isUnderline
           : isUnderline // ignore: cast_nullable_to_non_nullable
               as bool,
+      isOutline: null == isOutline
+          ? _value.isOutline
+          : isOutline // ignore: cast_nullable_to_non_nullable
+              as bool,
       fontFamily: null == fontFamily
           ? _value.fontFamily
           : fontFamily // ignore: cast_nullable_to_non_nullable
@@ -120,6 +127,7 @@ abstract class _$$TextToolOptionsStateDataImplCopyWith<$Res>
       bool isBold,
       bool isItalic,
       bool isUnderline,
+      bool isOutline,
       String fontFamily});
 }
 
@@ -144,6 +152,7 @@ class __$$TextToolOptionsStateDataImplCopyWithImpl<$Res>
     Object? isBold = null,
     Object? isItalic = null,
     Object? isUnderline = null,
+    Object? isOutline = null,
     Object? fontFamily = null,
   }) {
     return _then(_$TextToolOptionsStateDataImpl(
@@ -171,6 +180,10 @@ class __$$TextToolOptionsStateDataImplCopyWithImpl<$Res>
           ? _value.isUnderline
           : isUnderline // ignore: cast_nullable_to_non_nullable
               as bool,
+      isOutline: null == isOutline
+          ? _value.isOutline
+          : isOutline // ignore: cast_nullable_to_non_nullable
+              as bool,
       fontFamily: null == fontFamily
           ? _value.fontFamily
           : fontFamily // ignore: cast_nullable_to_non_nullable
@@ -189,6 +202,7 @@ class _$TextToolOptionsStateDataImpl implements _TextToolOptionsStateData {
       this.isBold = false,
       this.isItalic = false,
       this.isUnderline = false,
+      this.isOutline = false,
       this.fontFamily = 'Roboto'});
 
   @override
@@ -211,11 +225,14 @@ class _$TextToolOptionsStateDataImpl implements _TextToolOptionsStateData {
   final bool isUnderline;
   @override
   @JsonKey()
+  final bool isOutline;
+  @override
+  @JsonKey()
   final String fontFamily;
 
   @override
   String toString() {
-    return 'TextToolOptionsStateData(text: $text, fontSize: $fontSize, isAutoSize: $isAutoSize, isBold: $isBold, isItalic: $isItalic, isUnderline: $isUnderline, fontFamily: $fontFamily)';
+    return 'TextToolOptionsStateData(text: $text, fontSize: $fontSize, isAutoSize: $isAutoSize, isBold: $isBold, isItalic: $isItalic, isUnderline: $isUnderline, isOutline: $isOutline, fontFamily: $fontFamily)';
   }
 
   @override
@@ -233,13 +250,15 @@ class _$TextToolOptionsStateDataImpl implements _TextToolOptionsStateData {
                 other.isItalic == isItalic) &&
             (identical(other.isUnderline, isUnderline) ||
                 other.isUnderline == isUnderline) &&
+            (identical(other.isOutline, isOutline) ||
+                other.isOutline == isOutline) &&
             (identical(other.fontFamily, fontFamily) ||
                 other.fontFamily == fontFamily));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, text, fontSize, isAutoSize,
-      isBold, isItalic, isUnderline, fontFamily);
+      isBold, isItalic, isUnderline, isOutline, fontFamily);
 
   /// Create a copy of TextToolOptionsStateData
   /// with the given fields replaced by the non-null parameter values.
@@ -259,6 +278,7 @@ abstract class _TextToolOptionsStateData implements TextToolOptionsStateData {
       final bool isBold,
       final bool isItalic,
       final bool isUnderline,
+      final bool isOutline,
       final String fontFamily}) = _$TextToolOptionsStateDataImpl;
 
   @override
@@ -273,6 +293,8 @@ abstract class _TextToolOptionsStateData implements TextToolOptionsStateData {
   bool get isItalic;
   @override
   bool get isUnderline;
+  @override
+  bool get isOutline;
   @override
   String get fontFamily;
 

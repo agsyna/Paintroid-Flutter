@@ -11,6 +11,7 @@ class TextToolOptionsStateData with _$TextToolOptionsStateData {
     @Default(false) bool isBold,
     @Default(false) bool isItalic,
     @Default(false) bool isUnderline,
+    @Default(false) bool isOutline,
     @Default('Roboto') String fontFamily,
   }) = _TextToolOptionsStateData;
 }

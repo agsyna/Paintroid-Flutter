@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -78,6 +80,10 @@ void main() {
       textOptionsNotifier.toggleBold();
       await tester.pumpAndSettle();
       expect(container.read(textToolOptionsStateProvider).isBold, true);
+
+      textOptionsNotifier.toggleOutline();
+      await tester.pumpAndSettle();
+      expect(container.read(textToolOptionsStateProvider).isOutline, true);
     });
 
 
